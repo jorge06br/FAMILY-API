@@ -69,8 +69,8 @@ class FamilyStructure:
         # fill this method and update the return
         member = {}
         for x in self._members:
-            if x["id"] == id:
-                member = x
+            if item["id"] == id:
+                member = item
                 break
             else:
                 member = False
