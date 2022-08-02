@@ -39,7 +39,6 @@ class FamilyStructure:
             }
 
         ]
-
     # read-only: Use this method to generate random members ID's when adding members into the list
 
     def _generateId(self):
@@ -66,9 +65,8 @@ class FamilyStructure:
         return status
 
     def get_member(self, id):
-        # fill this method and update the return
-        member = {}
-        for x in self._members:
+        
+        for item in self._members:
             if item["id"] == id:
                 member = item
                 break

@@ -40,7 +40,7 @@ def get_all_members():
 
     return jsonify(response_body), 200
 
-@app.route('/members/<int:id>', methods=['GET'])
+@app.route('/member/<int:id>', methods=['GET'])
 def get_member(id):
     status = 200
     try:
@@ -54,8 +54,7 @@ def get_member(id):
 
     return jsonify(response_body), 200
 
-
-@app.route('/members', methods=['POST'])
+@app.route('/member', methods=['POST'])
 def add_member():
     status = 200 
     body = request.json
@@ -70,13 +69,13 @@ def add_member():
             response_body = member
         except:
             response_body = {
-            "msg": "El servidor explot :-o"
+            "msg": "El servidor exploto :-o"
             }
             status = 500
 
     return jsonify(response_body), status
 
-@app.route('/members/<int:id>', methods=['DELETE'])
+@app.route('/member/<int:id>', methods=['DELETE'])
 def delete_member(id):
     status = 200
     try:
